@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-6">
+        <h3>Sign In Here</h3>
+        <form [formGroup]="singinForm" (ngSubmit)="btnSubmitHandler()">
+            <!-- <input type="text" class="form-control"> -->
+            <!-- <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Input</mat-label>
+                <input matInput formControlName="emailId" >
+            </mat-form-field> -->
+
+            <div class="form-group">
+                <label class="control-label">Enter Email Id:</label>
+                <input type="email" formControlName="emailId" class="form-control" required>
+                <div *ngIf="singinForm.controls.emailId.errors && isSubmited">
+                    <div class="alert alert-danger">
+                        *Please Enter Valid Email ID
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Enter Password:</label>
+                <input type="password" formControlName="password" class="form-control" required>
+                <div *ngIf="singinForm.controls.password.errors && isSubmited">
+                    <div class="text-danger">
+                        *Please Enter Password between 5 to 15 char long
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Sign In</button>
+                <i>&nbsp;</i>
+                <button type="reset" class="btn btn-warning">Cancel</button>
+
+            </div>
+
+        </form>
+    </div>
+</div>
