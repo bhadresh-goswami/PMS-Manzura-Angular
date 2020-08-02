@@ -12,7 +12,7 @@ import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { NavComponent } from './common/nav/nav.component';
 import { SinginComponent } from './user/singin/singin.component';
-import { SignupComponent } from './user/signup/signup/signup.component';
+import { SignupComponent } from './user/signup/signup.component';
 
 @NgModule({
   declarations: [

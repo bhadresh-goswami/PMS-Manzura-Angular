@@ -3,6 +3,7 @@
         <h3>Sign Up</h3>
         <form [formGroup]="signUpForm" (ngSubmit)="btnSubmitHandler()">
             <div class="form-group">
+                <!-- email ID -->
                 <label class="control-label">Enter email ID:</label>
                 <input type="email" formControlName="emailId" class="form-control" required>
                 <div *ngIf="signUpForm.controls.emailId.invalid && isSubmitted">
@@ -10,10 +11,43 @@
                         You must enter a valid email ID.
                     </div>
                 </div>
+                <!-- password -->
+                <label class="control-label">Enter password:</label>
+                <input type="password" formControlName="password" class="form-control" required>
+                <div *ngIf="signUpForm.controls.password.invalid && isSubmitted">
+                    <div class="alert alert-danger">
+                        Password must be at least 5 characters.
+                    </div>
+                </div>
+                <!-- Confirm password -->
+                <label class="control-label"> Confirm password:</label>
+                <input type="password" formControlName="confirmPassword" class="form-control" required>
+                <div *ngIf="!passwordCheckEqual(signUpForm) && isSubmitted">
+                    <div class="text-danger">
+                        Passwords must match.
+                    </div>
+                </div> <br>
+                <div class="control-label">Gender</div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <i>&nbsp;</i>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <br>
+                <br>
+                <label for="country">Country (select one)</label>
+                <select class="form-control" id="country">
+                    <option>India</option>
+                    <option>Russia</option>
+                    <option>United States</option>
+                    <option>Uzbekistan</option>
+                 </select>
+
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Sign Up</button>
-                
+                <i>&nbsp;</i>
+                <button type="reset" class="btn btn-warning">Cancel</button>
             </div>
         </form>
     </div>
