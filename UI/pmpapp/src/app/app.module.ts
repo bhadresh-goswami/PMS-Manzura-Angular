@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { NavComponent } from './common/nav/nav.component';
+
+// Following imports added to routing:
 import { SinginComponent } from './user/singin/singin.component';
 import { SignupComponent } from './user/signup/signup.component';
 

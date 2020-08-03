@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-6">
-        <h3>Sign Up</h3>
+        <h1>Sign Up</h1>
         <form [formGroup]="signUpForm" (ngSubmit)="btnSubmitHandler()">
             <div class="form-group">
                 <!-- email ID -->
@@ -33,15 +33,21 @@
                 <i>&nbsp;</i>
                 <input type="radio" id="female" name="gender" value="female">
                 <label for="female">Female</label>
+                <div *ngIf="signUpForm.controls.gender.invalid && isSubmitted">
+                    <div class="text-danger">
+                        This part is required.
+                    </div>
+                </div>
                 <br>
                 <br>
-                <label for="country">Country (select one)</label>
+                <label for="country">Country (select one)</label>   
                 <select class="form-control" id="country">
                     <option>India</option>
                     <option>Russia</option>
                     <option>United States</option>
                     <option>Uzbekistan</option>
                  </select>
+                
 
             </div>
             <div class="form-group">
