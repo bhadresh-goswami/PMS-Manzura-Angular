@@ -55,6 +55,8 @@
                 <button type="reset" class="btn btn-warning">Cancel</button>
             </div>
             <!-- **** BELOW CODE ISN'T WORKING ****-->
+            {{signUpForm.valid}}
+            {{isSubmitted}}
             <div *ngIf="signUpForm.valid && isSubmitted">
                 <div class="alert alert-success">
                     Sign up successful.

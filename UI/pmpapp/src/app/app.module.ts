@@ -16,6 +16,7 @@ import { NavComponent } from './common/nav/nav.component';
 import { SinginComponent } from './user/singin/singin.component';
 import { SignupComponent } from './user/signup/signup.component';
 import { RecoverPasswordComponent } from './user/recover-password/recover-password.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { RecoverPasswordComponent } from './user/recover-password/recover-passwo
     NavComponent,
     SinginComponent,
     SignupComponent,
-    RecoverPasswordComponent
+    RecoverPasswordComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

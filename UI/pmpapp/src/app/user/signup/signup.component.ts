@@ -12,8 +12,8 @@ export class SignupComponent implements OnInit {
     "emailId": new FormControl('', [Validators.required, Validators.email]),
     "password": new FormControl('', [Validators.required, Validators.minLength(5)]),
     "confirmPassword": new FormControl('', [Validators.required]),
-    "gender": new FormControl('', [Validators.required]),
-    "country": new FormControl('', [Validators.required])
+    "gender": new FormControl(''),
+    "country": new FormControl('')
   })
 
   isSubmitted = false;
