@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: "sign-in", component: SinginComponent },
   { path: "sign-up", component: SignupComponent },
   { path: "recover-password", component: RecoverPasswordComponent},
-  {path:'', redirectTo:'/home', pathMatch:'full'}
+  { path: '', redirectTo:'/home', pathMatch:'full'},
+  { path: '**', redirectTo: '/home', pathMatch: 'full'}
 ];
 
 @NgModule({
