@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+  constructor() { }
   signUpForm = new FormGroup({
     "emailId": new FormControl('', [Validators.required, Validators.email]),
     "password": new FormControl('', [Validators.required, Validators.minLength(5)]),
@@ -17,7 +18,6 @@ export class SignupComponent implements OnInit {
 
   isSubmitted = false;
 
-  constructor() { }
   ngOnInit(): void { }
 
   btnSubmitHandler() {

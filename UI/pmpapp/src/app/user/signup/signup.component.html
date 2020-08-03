@@ -28,10 +28,10 @@
                     </div>
                 </div> <br>
                 <div class="control-label">Gender</div>
-                <input type="radio" id="male" name="gender" value="male">
+                <input type="radio" id="male" formControlName="gender" value="male">
                 <label for="male">Male</label>
                 <i>&nbsp;</i>
-                <input type="radio" id="female" name="gender" value="female">
+                <input type="radio" id="female" formControlName="gender" value="female">
                 <label for="female">Female</label>
                 <div *ngIf="signUpForm.controls.gender.invalid && isSubmitted">
                     <div class="text-danger">
@@ -45,16 +45,22 @@
                     <option>India</option>
                     <option>Russia</option>
                     <option>United States</option>
-                    <option>Uzbekistan</option>
+                    <option>Uzbekistan</option>     
                  </select>
-                
-
+                 
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Sign Up</button>
                 <i>&nbsp;</i>
                 <button type="reset" class="btn btn-warning">Cancel</button>
             </div>
+            <!-- **** BELOW CODE ISN'T WORKING ****-->
+            <div *ngIf="signUpForm.valid && isSubmitted">
+                <div class="alert alert-success">
+                    Sign up successful.
+                </div>
+            </div>
+            
         </form>
     </div>
 </div>

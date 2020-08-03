@@ -15,6 +15,7 @@ import { NavComponent } from './common/nav/nav.component';
 // Following imports added to routing:
 import { SinginComponent } from './user/singin/singin.component';
 import { SignupComponent } from './user/signup/signup.component';
+import { RecoverPasswordComponent } from './user/recover-password/recover-password.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SignupComponent } from './user/signup/signup.component';
     FooterComponent,
     NavComponent,
     SinginComponent,
-    SignupComponent
+    SignupComponent,
+    RecoverPasswordComponent
   ],
   imports: [
     BrowserModule,
